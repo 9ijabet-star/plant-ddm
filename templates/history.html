@@ -1,0 +1,5 @@
+@app.route("/history")
+@login_required
+def history():
+    logs = current_user.predictions  # list of PredictionLog
+    return render_template("history.html", logs=logs)

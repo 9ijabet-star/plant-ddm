@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plant Disease Prediction</title>
+</head>
+<body>
+  <h1>Upload Plant Leaf Image</h1>
+
+
+
+
+<form action="/predict" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required>
+    <button type="submit"><h2>PREDICT</h2></button>
+</form>
+
+<p><strong>Prediction:</strong> {{ prediction }}</p>
+<p><strong>Confidence:</strong> {{ confidence }}</p>
+<p><strong>Treatment Recommendation:</strong> {{ treatment }}</p>
+
+
+
+</body>
+</html>
